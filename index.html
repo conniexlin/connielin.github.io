@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>京都兩天一夜｜行程＆住宿建議</title>
+  <meta name="description" content="精選京都兩天一夜行程、景點動線與住宿建議，含地圖、交通小撇步與預算參考，單檔HTML可直接開啟使用。" />
+  <style>
+    :root {
+      --bg: #0f172a;          /* slate-900 */
+      --panel: #111827;       /* gray-900 */
+      --card: #0b1220;        /* deep */
+      --muted: #94a3b8;       /* slate-400 */
+      --text: #e5e7eb;        /* gray-200 */
+      --brand: #10b981;       /* emerald-500 */
+      --brand-2: #22d3ee;     /* cyan-400 */
+      --ring: #38bdf8;        /* sky-400 */
+      --accent: #f59e0b;      /* amber-500 */
+      --danger: #ef4444;      /* red-500 */
+      --ok: #22c55e;          /* green-500 */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg, #0b1020 0%, #0a0f1a 100%);color:var(--text);font:16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, "PingFang TC", "Microsoft JhengHei", sans-serif}
+    a{color:var(--brand)} a:hover{opacity:.9}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    header.hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06);background:
+      radial-gradient(1200px 400px at 80% -10%, rgba(34,211,238,.15), transparent 60%),
+      radial-gradient(900px 400px at 10% -10%, rgba(16,185,129,.15), transparent 60%);
+    }
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:56px 24px}
+    .badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(34,211,238,.1);border:1px solid rgba(34,211,238,.25);color:#cffafe;font-weight:600;font-size:13px}
+    h1{font-size:40px;line-height:1.15;margin:14px 0 6px}
+    .subtitle{color:var(--muted)}
+    .hero-card{background:rgba(255,255,255,.03);backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,.07);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .hero-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:14px;border-radius:16px}
+    .hero-stat strong{font-size:22px}
+    nav.top{position:sticky;top:0;z-index:10;background:rgba(10,15,26,.85);backdrop-filter: blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav .nav-inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:10px 24px;max-width:1100px;margin:0 auto}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:var(--text);text-decoration:none;font-weight:600}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{border-color:rgba(34,211,238,.35);background:linear-gradient(180deg, rgba(34,211,238,.22), rgba(34,211,238,.06));}
+
+    .section{padding:36px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+    .section h2{margin:0 0 10px;font-size:28px}
+    .kicker{font-size:13px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.cols-3{grid-template-columns:repeat(3,1fr)} .grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+
+    .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px}
+
+    .timeline{position:relative}
+    .timeline:before{content:"";position:absolute;left:16px;top:0;bottom:0;width:2px;background:linear-gradient(180deg, rgba(34,211,238,.5), rgba(16,185,129,.3))}
+    .tl-item{display:grid;grid-template-columns:36px 1fr;gap:14px;margin-bottom:18px}
+    .dot{width:12px;height:12px;border-radius:999px;background:var(--brand);box-shadow:0 0 0 3px rgba(34,211,238,.2);margin-top:6px}
+    .tl-title{display:flex;align-items:baseline;gap:10px}
+    .pill{font-size:12px;border:1px solid rgba(148,163,184,.3);color:#cbd5e1;border-radius:999px;padding:2px 8px}
+
+    .photo{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .photo img{width:100%;height:210px;object-fit:cover;display:block}
+
+    .hotel{display:flex;gap:14px}
+    .hotel img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+    .hotel .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+
+    .tip{font-size:14px;color:var(--muted)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.02);cursor:pointer;font-weight:600}
+    .chip.active{border-color:var(--ring);box-shadow:0 0 0 3px rgba(56,189,248,.15) inset}
+
+    .footer{padding:24px 0;color:#9aa4b2;font-size:14px}
+    .muted{color:var(--muted)}
+    .right{display:flex;gap:12px;align-items:center}
+    .print{cursor:pointer}
+    .map-btn{font-size:14px}
+  </style>
+</head>
+<body>
+  <nav class="top">
+    <div class="nav-inner">
+      <div class="links">
+        <a class="btn" href="#plan">行程總覽</a>
+        <a class="btn" href="#day1">第一天</a>
+        <a class="btn" href="#day2">第二天</a>
+        <a class="btn" href="#stay">住宿</a>
+        <a class="btn" href="#tips">交通小撇步</a>
+      </div>
+      <div class="right">
+        <button class="btn primary print" title="列印或存成PDF">🖨️ 下載PDF</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner container">
+      <div>
+        <span class="badge">京都 Kyoto ・ 2天1夜 精華走法</span>
+        <h1>京都兩天一夜：經典寺社 × 巷弄風景 × 宵夜小酌</h1>
+        <p class="subtitle">避開繞遠與來回折返，將伏見稻荷、清水寺、祇園、嵐山、金閣寺與錦市場串成順路動線。含三種預算的住宿推薦與交通要點。</p>
+        <div class="hero-grid">
+          <div class="hero-card hero-stat"><div>步行里程（約）</div><strong>12–15 km</strong></div>
+          <div class="hero-card hero-stat"><div>交通票券</div><strong>ICOCA／關西地鐵一日券（視行程）</strong></div>
+          <div class="hero-card hero-stat"><div>最佳時段</div><strong>清晨 & 傍晚</strong></div>
+          <div class="hero-card hero-stat"><div>照片熱點</div><strong>稻荷千鳥居、產寧坂、竹林、金閣</strong></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="grid cols-2">
+          <div class="photo"><img alt="伏見稻荷千鳥居" src="https://images.unsplash.com/photo-1544989164-31dc3c645987?q=80&w=1200&auto=format&fit=crop"/></div>
+          <div class="photo"><img alt="祇園石疊與町家" src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1200&auto=format&fit=crop"/></div>
+          <div class="photo"><img alt="嵐山竹林" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1200&auto=format&fit=crop"/></div>
+          <div class="photo"><img alt="金閣寺" src="https://images.unsplash.com/photo-1554180424-99bd7b6ecd20?q=80&w=1200&auto=format&fit=crop"/></div>
+        </div>
+        <p class="tip">圖片取自 Unsplash，僅供行程示意。</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="plan" class="section">
+      <div class="kicker">Overview</div>
+      <h2>路線概覽（不繞路動線）</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Day 1｜南到東山線</h3>
+          <p>清晨 <strong>伏見稻荷大社</strong> → <strong>清水寺</strong> → <strong>產寧坂 & 二年坂</strong> → 下午 <strong>祇園・花見小路</strong> → 夜 <strong>先斗町小酌</strong>。</p>
+          <p class="tip">行李可先寄放飯店或使用車站置物櫃。</p>
+        </div>
+        <div class="card">
+          <h3>Day 2｜西到北圈</h3>
+          <p>清晨 <strong>嵐山竹林・天龍寺</strong> → <strong>渡月橋</strong> → 午 <strong>錦市場</strong> → 午後 <strong>金閣寺</strong> → 傍晚返回京都車站。</p>
+          <p class="tip">嵐山→金閣寺可接阪急/巴士，避開來回折返。</p>
+        </div>
+        <div class="card">
+          <h3>住宿區域建議</h3>
+          <ul>
+            <li><strong>四条河原町</strong>：逛街吃飯方便，夜生活多。</li>
+            <li><strong>祇園・東山</strong>：和風氛圍濃、清晨拍照近。</li>
+            <li><strong>京都車站</strong>：交通樞紐，移動最省時。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="day1" class="section">
+      <div class="kicker">Day 1</div>
+      <h2>第一天｜伏見稻荷 → 清水寺 → 祇園 → 先斗町</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>06:30 伏見稻荷大社</h3><span class="pill">避開人潮</span></div>
+            <p>拍攝經典「千本鳥居」。若體力足，可上山到四ツ辻眺望京都市景。</p>
+            <div class="chips">
+              <a class="chip map-btn" target="_blank" href="https://maps.google.com/?q=Fushimi+Inari+Taisha">地圖</a>
+              <span class="chip">停留 90 分</span>
+              <span class="chip">JR 奈良線「稻荷」站</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>09:30 清水寺</h3><span class="pill">世界文化遺產</span></div>
+            <p>參拜舞台本殿，沿<strong>清水坂→產寧坂→二年坂</strong>散步至八坂神社。</p>
+            <div class="chips">
+              <a class="chip map-btn" target="_blank" href="https://maps.google.com/?q=Kiyomizu-dera">地圖</a>
+              <span class="chip">停留 120 分</span>
+              <span class="chip">巴士「清水道/五條坂」</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>14:00 祇園・花見小路</h3><span class="pill">町家漫步</span></div>
+            <p>下午茶推薦：和菓子、抹茶聖代。尊重住民，避免在私人區域拍攝。</p>
+            <div class="chips">
+              <span class="chip">停留 60–90 分</span>
+              <span class="chip">徒步</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>18:30 先斗町</h3><span class="pill">鴨川夜景</span></div>
+            <p>串燒、居酒屋或懷石小店。旺季建議事先訂位。</p>
+            <div class="chips">
+              <span class="chip">停留 90–120 分</span>
+              <span class="chip">阪急「京都河原町」</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="day2" class="section">
+      <div class="kicker">Day 2</div>
+      <h2>第二天｜嵐山 → 錦市場 → 金閣寺</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>06:45 嵐山竹林 & 天龍寺</h3><span class="pill">清晨最佳光線</span></div>
+            <p>先走竹林步道避開旅行團，再入天龍寺庭園。</p>
+            <div class="chips">
+              <a class="chip map-btn" target="_blank" href="https://maps.google.com/?q=Arashiyama+Bamboo+Grove">地圖</a>
+              <span class="chip">停留 120 分</span>
+              <span class="chip">JR/嵐電「嵐山」</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>10:00 渡月橋</h3><span class="pill">山景河景</span></div>
+            <p>河岸散步、拍照。若時間夠可租和服或小舟體驗。</p>
+            <div class="chips">
+              <span class="chip">停留 45 分</span>
+              <span class="chip">徒步</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>12:30 錦市場</h3><span class="pill">午餐小吃街</span></div>
+            <p>玉子燒、串烤海鮮、漬物、抹茶甜點。請於店前用餐，勿邊走邊吃。</p>
+            <div class="chips">
+              <a class="chip map-btn" target="_blank" href="https://maps.google.com/?q=Nishiki+Market">地圖</a>
+              <span class="chip">停留 60–90 分</span>
+              <span class="chip">阪急「烏丸/河原町」</span>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="dot"></div>
+          <div>
+            <div class="tl-title"><h3>15:00 金閣寺</h3><span class="pill">經典必訪</span></div>
+            <p>繞園一圈約 40–60 分。可接巴士回京都車站或四条。</p>
+            <div class="chips">
+              <a class="chip map-btn" target="_blank" href="https://maps.google.com/?q=Kinkaku-ji">地圖</a>
+              <span class="chip">停留 60 分</span>
+              <span class="chip">市巴士</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stay" class="section">
+      <div class="kicker">Stays</div>
+      <h2>住宿推薦（依預算過濾）</h2>
+      <div class="chips" id="budgetChips">
+        <button class="chip active" data-filter="all">全部</button>
+        <button class="chip" data-filter="budget">$ 節省</button>
+        <button class="chip" data-filter="mid">$$ 中等</button>
+        <button class="chip" data-filter="lux">$$$ 高端</button>
+      </div>
+      <div class="grid cols-2" id="hotelList" style="margin-top:16px">
+        <div class="card hotel" data-tag="mid" aria-label="Cross Hotel Kyoto">
+          <img alt="Cross Hotel Kyoto" src="https://images.unsplash.com/photo-1551776235-dde6d4829808?q=80&w=1200&auto=format&fit=crop"/>
+          <div>
+            <h3>Cross Hotel Kyoto（四条河原町）</h3>
+            <div class="tags"><span class="pill">地點方便</span><span class="pill">設計感</span><span class="pill">$$</span></div>
+            <p class="muted">步行可到先斗町與鴨川，夜間覓食選擇多，逛街回飯店最省時。</p>
+          </div>
+        </div>
+        <div class="card hotel" data-tag="lux" aria-label="Hotel The Celestine Kyoto Gion">
+          <img alt="The Celestine Kyoto Gion" src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1200&auto=format&fit=crop"/>
+          <div>
+            <h3>The Celestine Kyoto Gion（祇園）</h3>
+            <div class="tags"><span class="pill">近東山</span><span class="pill">靜謐</span><span class="pill">$$$</span></div>
+            <p class="muted">清晨直攻清水寺與產寧坂零距離，喜歡早拍的旅人適合。</p>
+          </div>
+        </div>
+        <div class="card hotel" data-tag="budget" aria-label="Sakura Terrace The Gallery">
+          <img alt="Sakura Terrace The Gallery" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop"/>
+          <div>
+            <h3>Sakura Terrace The Gallery（京都站）</h3>
+            <div class="tags"><span class="pill">交通樞紐</span><span class="pill">投幣洗衣</span><span class="pill">$</span></div>
+            <p class="muted">搭車進出最省力，適合短天數行程或提大件行李者。</p>
+          </div>
+        </div>
+        <div class="card hotel" data-tag="lux" aria-label="Ryokan Yachiyo">
